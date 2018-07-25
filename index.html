@@ -263,6 +263,197 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.ihago.com/2018/07/25/nodejs-study-basic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ihago">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://www.ihago.com/favicon.ico">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IHAGO博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/25/nodejs-study-basic/" itemprop="url">nodejs-study-basic</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-25T14:11:16+08:00">
+                2018-07-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/07/25/nodejs-study-basic/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://blog.ihago.com/2018/07/25/nodejs-study-basic/" class="cy_cmt_count" data-xid="2018/07/25/nodejs-study-basic/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2018/07/25/nodejs-study-basic/" class="leancloud_visitors" data-flag-title="nodejs-study-basic">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Node.js是什么？官网给出的解释是：<br>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。</p>
+<h2 id="Node-js中的模块"><a href="#Node-js中的模块" class="headerlink" title="Node.js中的模块"></a>Node.js中的模块</h2><ul>
+<li><code>assert</code>- 断言，assert模块提供了断言测试的函数，用于测试不变式  </li>
+<li><code>Buffer</code>- 缓存，Buffer类在Node.js中是一个全局变量，用于实现二进制数据的存储和转换  </li>
+<li><code>child_process</code>- 子进程，提供衍生子进程的功能  </li>
+<li><code>cluster</code>- 集群，用于实现多进程  </li>
+<li><code>console</code>- 控制台，简单的调试控制台，类似于Web浏览器提供的JavaScript控制台  </li>
+<li><code>crypto</code>- 加密，提供加密功能，包含对 OpenSSL 的哈希、HMAC、加密、解密、签名、以及验证功能的一整套封装  </li>
+<li><code>dgram</code>- 数据报，提供UDP数据包scoket的实现  </li>
+<li><code>dns</code>- 域名服务器，用于实现与dns相关的处理  </li>
+<li><code>Error</code>- 错误，提供Node.js引起的javaScript错误和系统错误  </li>
+<li><code>events</code>- 事件，用于为事件处理提供一个基础类  </li>
+<li><code>fs</code>- 文件系统，用于操作文件和文件系统  </li>
+<li><code>http</code>- HTTP，用于实现HTTP服务器端及客户端  </li>
+<li><code>https</code>- HTTPS，用于实现HTTPS服务器端及客户端  </li>
+<li><code>net</code>- 网络，用于创建TCP服务器与客户端  </li>
+<li><code>os</code>- 操作系统，提供了一些操作系统相关的实用方法  </li>
+<li><code>path</code>- 路径，提供了一些用于处理文件和目录路径的工具函数  </li>
+<li><code>querystring</code>- 查询字符串，用于处理HTTP请求中使用的查询字符串  </li>
+<li><code>readline</code>- 逐行读取，用于读取一行标准输入流  </li>
+<li><code>repl</code>- 交互式解释器，用于实现REPL（Read-Eval-Print-Loop）交互式运行环境  </li>
+<li><code>stream</code>- 流，用于构建实现了流接口的对象  </li>
+<li><code>string_decoder</code>- 字符串解码器，用于从二进制数据到字符串数据之间的转换  </li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/25/nodejs-study-basic/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.ihago.com/2018/07/04/HelloBlog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -473,7 +664,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -484,7 +675,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -495,7 +686,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
