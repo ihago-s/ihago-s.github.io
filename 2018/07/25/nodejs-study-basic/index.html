@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="IHAGO博客">
 <meta property="og:description" content="Node.js是什么？官网给出的解释是：Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。 Node.js中的模块 assert- 断言，assert模块提供了断言测试的函数，用于测试不变式   Buffer- 缓存，B">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-25T06:24:06.697Z">
+<meta property="og:updated_time" content="2018-07-25T06:30:28.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js学习（1）-基础知识">
 <meta name="twitter:description" content="Node.js是什么？官网给出的解释是：Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。 Node.js中的模块 assert- 断言，assert模块提供了断言测试的函数，用于测试不变式   Buffer- 缓存，B">
@@ -452,8 +452,10 @@
 <li><code>emitter.once(eventName, listener)</code>，添加一个单次<code>listener</code>函数到名为<code>eventName</code>的事件。下次触发<code>eventName</code>时，监听器会被移除，然后调用  </li>
 <li><code>emitter.removeListener(eventName, listener)</code>，从名为 <code>eventName</code> 的事件的监听器数组中移除指定的 <code>listener</code>。<code>removeListener</code>最多只会从监听器数组里移除一个监听器实例。如果任何单一的监听器被多次添加到指定<code>eventName</code>的监听器数组中，则必须多次调用<code>removeListener</code>才能移除每个实例。  </li>
 <li><code>emitter.removeAllListeners([eventName])</code>，移除全部或指定<code>eventName</code>的监听器  </li>
-<li><code>emitter.emit(eventName[,…args])</code>，按监听器的注册顺序，同步地调用每个注册名为<code>eventName</code>事件的监听器，并传入提供的参数  <h5 id="事件环机制"><a href="#事件环机制" class="headerlink" title="事件环机制"></a>事件环机制</h5>在Node.js中，采用非阻塞I/O机制，这意味着要求所有应用程序所进行的处理，如HTTP请求、数据库查询、文件的输入/输出等，都不会在处理结束之前阻碍其他处理的进行，也就是说，这些处理都是独立进行的，当处理结束时，会触发一个回调事件，也就是说，在Node.js中，我们所要编写的时各种I/O事件的回调函数的处理。在回调函数的执行过程中，他将转而处理新的事件，在该事件处理完毕之后，转而继续处理原回调函数。这种环状处理机制，在Node.js中称为事件环机制。<br><br><br>参考<a href="http://nodejs.cn/" target="_blank" rel="noopener">nodejs中文网</a></li>
+<li><code>emitter.emit(eventName[,…args])</code>，按监听器的注册顺序，同步地调用每个注册名为<code>eventName</code>事件的监听器，并传入提供的参数  </li>
 </ul>
+<hr>
+<h5 id="事件环机制"><a href="#事件环机制" class="headerlink" title="事件环机制"></a>事件环机制</h5><p>在Node.js中，采用非阻塞I/O机制，这意味着要求所有应用程序所进行的处理，如HTTP请求、数据库查询、文件的输入/输出等，都不会在处理结束之前阻碍其他处理的进行，也就是说，这些处理都是独立进行的，当处理结束时，会触发一个回调事件，也就是说，在Node.js中，我们所要编写的时各种I/O事件的回调函数的处理。在回调函数的执行过程中，他将转而处理新的事件，在该事件处理完毕之后，转而继续处理原回调函数。这种环状处理机制，在Node.js中称为事件环机制。<br><br><br>参考<a href="http://nodejs.cn/" target="_blank" rel="noopener">nodejs中文网</a></p>
 
       
     </div>
